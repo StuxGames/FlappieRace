@@ -4,7 +4,7 @@ const CLIENT_NETWORK = "res://client/client_network.tscn"
 const SERVER_NETWORK = "res://server/server_network.tscn"
 const RPC_PORT = 31400
 const MAX_PLAYERS = 16
-const SERVER_DOMAIN_URL := "https://flappyrace.stux.games"
+const SERVER_DOMAIN_URL := "https://flappyrace.backends.stux.games"
 const SERVER_LIST_URL := SERVER_DOMAIN_URL + "/api/list"
 const SERVER_MANAGER_URL := SERVER_DOMAIN_URL + "/api/manager"
 
