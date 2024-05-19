@@ -29,14 +29,12 @@ high_score_label_path = NodePath("CenterContainer/GridContainer/Gameplay/VBoxCon
 [node name="Title" parent="." instance=ExtResource( 6 )]
 margin_top = -10.0
 margin_bottom = 107.0
+custom_colors/font_color_shadow = Color( 0.0196078, 0.0117647, 0, 1 )
 text = "Options"
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="GridContainer" type="GridContainer" parent="CenterContainer"]
 margin_left = 310.0

@@ -40,10 +40,12 @@ const COLOUR_OPTIONS: PoolColorArray = PoolColorArray(
 	]
 )
 
+var play_flap_sound = true
+
 # Settings
 var high_score: int = 0 setget set_highscore
 var player_colour: int = 0 setget set_player_colour
-var player_name: String = "Flappo" setget set_player_name
+var player_name: String = "Flappie" setget set_player_name
 var settings := {}
 
 # Audio vars

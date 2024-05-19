@@ -29,6 +29,7 @@ size_flags_vertical = 3
 anchor_right = 0.0
 margin_right = 1900.0
 margin_bottom = 111.0
+custom_colors/font_color_shadow = Color( 0.0196078, 0.0117647, 0, 1 )
 text = "Self Host Setup"
 
 [node name="Menu" type="Control" parent="VBoxContainer"]
