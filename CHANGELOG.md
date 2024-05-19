@@ -19,14 +19,6 @@ Types of changes:
 
 ## [1.0.0.0] - 2024-05-19
 
-## [1.0.0.0] - 2024-05-19
-
-## [1.0.0.0] - 2024-05-19
-
-## [1.0.0.0] - 2024-05-19
-
-## [1.0.0.0] - 2024-05-19
-
 First proper release! :D
 
 ### Added
@@ -36,9 +28,3 @@ First proper release! :D
 [Unreleased]: https://github.com/StuxGames/FlappyRace/compare/1.0.0.0...HEAD
 
 [1.0.0.0]: https://github.com/StuxGames/FlappyRace/compare/1.0.0.0...1.0.0.0
-
-[1.0.0.0]: https://github.com/StuxGames/FlappyRace/compare/1.0.0.0...1.0.0.0
-
-[1.0.0.0]: https://github.com/StuxGames/FlappyRace/compare/1.0.0.0...1.0.0.0
-
-[1.0.0.0]: https://github.com/StuxGames/FlappyRace/compare/d4ac34c1a9179b3b4442d0ea98fb8de5d848d783...1.0.0.0
