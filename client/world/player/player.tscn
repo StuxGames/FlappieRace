@@ -44,7 +44,7 @@
 [ext_resource path="res://client/world/player/player_tongue.png" type="Texture" id=42]
 
 [sub_resource type="RectangleShape2D" id=19]
-extents = Vector2( 45, 28 )
+extents = Vector2( 40.5, 18.5 )
 
 [sub_resource type="Curve" id=8]
 _data = [ Vector2( 0, 0.256757 ), 0.0, 0.743243, 0, 1, Vector2( 1, 1 ), 0.743243, 0.0, 1, 0 ]
@@ -431,7 +431,8 @@ ImpactParticles = ExtResource( 22 )
 FlapParticles = ExtResource( 24 )
 
 [node name="CollisionShape2D" parent="." index="0"]
-position = Vector2( 1, -5 )
+position = Vector2( 1.5, 0.5 )
+scale = Vector2( 1.05498, 0.8 )
 shape = SubResource( 19 )
 
 [node name="VisibleBody" type="Node2D" parent="." index="1"]
@@ -451,7 +452,7 @@ z_index = 2
 modulate = Color( 0.984314, 0.0941176, 0.0941176, 1 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 20 )
-frame = 2
+frame = 3
 playing = true
 
 [node name="NewHorn1" type="Sprite" parent="VisibleBody/Sprites" index="1"]

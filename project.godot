@@ -98,12 +98,12 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Flappy Race"
+config/name="Flappie Race"
 config/description="Multiplayer flappy bird"
 run/main_scene="res://common/main.tscn"
 config/icon="res://icon.png"
 config/windows_native_icon="res://icon.ico"
-config/version="v1.0.0"
+config/version="v1.0.1"
 config/debug_tools=false
 config/debug_tools.editor=true
 
