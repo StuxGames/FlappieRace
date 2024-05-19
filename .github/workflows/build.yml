@@ -29,22 +29,27 @@ jobs:
       matrix:
         platform: [linux, windows, mac]
     steps:
+      - name: Setup Godot
+        # Download Godot Headless and export templates, version is set from env variables
+        run: |
+          wget https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_linux_headless.64.zip
+          wget https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz
+          mkdir ~/.cache
+          mkdir -p ~/.config/godot
+          mkdir -p ~/.local/share/godot/templates/${GODOT_VERSION}.stable
+          unzip Godot_v${GODOT_VERSION}-stable_linux_headless.64.zip
+          mv Godot_v${GODOT_VERSION}-stable_linux_headless.64 /usr/local/bin/godot
+          unzip Godot_v${GODOT_VERSION}-stable_export_templates.tpz
+          mv templates/* ~/.local/share/godot/templates/${GODOT_VERSION}.stable
       - name: Checkout
         uses: actions/checkout@v4
         with:
           ref: ${{ inputs.commit_hash }}
           fetch-depth: 0
-      - name: export game
-        id: export
-        # Use latest version (see releases for all versions)
-        uses: firebelley/godot-export@v5.2.0
-        with:
-          # Defining all the required inputs
-          godot_executable_download_url: https://downloads.tuxfamily.org/godotengine/3.5.3/Godot_v3.5.3-stable_linux_headless.64.zip
-          godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/3.5.3/Godot_v3.5.3-stable_export_templates.tpz
-          relative_project_path: ./
-          use_preset_export_path: true
-          archive_output: true
+      - name: Build
+        run: |
+          mkdir -v -p builds/${{ matrix.platform }}
+          godot -v --export-debug ${{ matrix.platform }}
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
