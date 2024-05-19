@@ -25,7 +25,5 @@ First proper release! :D
 
 -   Singleplayer and multiplayer modes
 
-[Unreleased]: https://github.com/StuxGames/FlappyRace/compare/1.0.0.0...HEAD
-
-[1.0.0.0]: https://github.com/StuxGames/FlappyRace/releases/tag/v1.0.0.0
+[Unreleased]: https://github.com/StuxGames/FlappyRace/releases/tag/v1.0.0.0
 
