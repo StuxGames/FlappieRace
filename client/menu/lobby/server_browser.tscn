@@ -27,6 +27,7 @@ autostart = true
 
 [node name="Title" parent="." instance=ExtResource( 7 )]
 margin_bottom = 111.0
+custom_colors/font_color_shadow = Color( 0.0196078, 0.0117647, 0, 1 )
 text = "Server Browser"
 
 [node name="Panel" type="Panel" parent="."]

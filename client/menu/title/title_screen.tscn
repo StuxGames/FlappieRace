@@ -26,7 +26,8 @@ __meta__ = {
 
 [node name="Logo" type="TextureRect" parent="Menu"]
 anchor_right = 1.0
-margin_bottom = 75.0
+margin_top = -2.0
+margin_bottom = 258.0
 size_flags_horizontal = 5
 size_flags_vertical = 5
 texture = ExtResource( 2 )
@@ -85,12 +86,10 @@ anchor_bottom = 1.0
 margin_left = -187.0
 margin_top = -35.0
 size_flags_vertical = 1
+custom_colors/font_color_shadow = Color( 0.0196078, 0.0117647, 0, 1 )
 custom_fonts/font = ExtResource( 5 )
 text = "Stux Games"
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="VersionLabel" type="Label" parent="Menu"]
 anchor_top = 1.0
@@ -99,12 +98,10 @@ margin_top = -35.0
 margin_right = 140.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
+custom_colors/font_color_shadow = Color( 0.0196078, 0.0117647, 0, 1 )
 custom_fonts/font = ExtResource( 5 )
-text = "vX.Y.Z"
+text = "vW.X.Y.Z"
 valign = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="pressed" from="Menu/Buttons/SingleplayerButton" to="." method="_on_SingleplayerButton_pressed"]
 [connection signal="pressed" from="Menu/Buttons/MultiplayerButton" to="." method="_on_MultiplayerButton_pressed"]

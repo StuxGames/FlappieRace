@@ -49,7 +49,8 @@ func update_player_state() -> void:
 func do_flap() -> void:
 	.do_flap()
 	if enable_movement:
-		play_flap_sound()
+		if Globals.play_flap_sound:
+			play_flap_sound()
 		spawn_flap_particles()
 		$AnimationPlayer.play("flap")
 
@@ -83,6 +84,7 @@ func disable_control() -> void:
 
 func set_body_colour(value: int) -> void:
 	body_colour = Globals.COLOUR_OPTIONS[value]
+	$VisibleBody/Sprites/NewBody.modulate = body_colour
 	$VisibleBody/Sprites/Body.modulate = body_colour
 	$VisibleBody/Sprites/BodyOutline.modulate = body_colour
 	$VisibleBody/Sprites/Wing.modulate = body_colour

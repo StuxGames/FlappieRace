@@ -13,7 +13,4 @@ custom_constants/vseparation = 8
 custom_constants/hseparation = 8
 columns = 8
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 swatch_template = ExtResource( 1 )

@@ -10,6 +10,7 @@ var spawned_title_players := []
 
 
 func _ready() -> void:
+	Globals.play_flap_sound = false
 	$Menu/VersionLabel.text = ProjectSettings.get_setting("application/config/version")
 	$Menu/Buttons/SingleplayerButton.grab_focus()
 	var result := get_viewport().connect("size_changed", self, "spawn_title_players")
@@ -43,15 +44,18 @@ func spawn_title_players() -> void:
 
 
 func _on_SingleplayerButton_pressed() -> void:
+	Globals.play_flap_sound = true
 	change_menu(singleplayer_scene)
 	Network.start_singleplayer()
 
 
 func _on_MultiplayerButton_pressed() -> void:
+	Globals.play_flap_sound = true
 	change_menu(multiplayer_scene)
 
 
 func _on_OptionsButton_pressed() -> void:
+	Globals.play_flap_sound = true
 	change_menu(options_scene)
 
 

@@ -81,6 +81,8 @@ script = ExtResource( 4 )
 [node name="Title" parent="." instance=ExtResource( 5 )]
 margin_top = -10.0
 margin_bottom = 107.0
+rect_scale = Vector2( 1, 0.998114 )
+custom_colors/font_color_shadow = Color( 0.0196078, 0.0117647, 0, 1 )
 text = "Setup"
 
 [node name="PlayerOptions" type="CenterContainer" parent="."]

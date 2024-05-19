@@ -6,9 +6,9 @@ on:
     inputs:
       tag:
         required: true
-        description: The tag to release (e.g. 1.2.3)
+        description: The tag to release (e.g. 1.2.3.4)
         type: string
-        default: 0.0.0
+        default: 0.0.0.0
 
 jobs:
   update_version:
@@ -46,17 +46,17 @@ jobs:
         with:
           ref: ${{ needs.update_version.outputs.commit_hash }}
       - name: Download Windows Build
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: FlappyRace-windows-${{ needs.update_version.outputs.commit_hash }}
           path: builds/FlappyRace-${{ github.event.inputs.tag }}-Windows
       - name: Download Mac Build
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: FlappyRace-mac-${{ needs.update_version.outputs.commit_hash }}
           path: builds/FlappyRace-${{ github.event.inputs.tag }}-Mac
       - name: Download Linux Build
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: FlappyRace-linux-${{ needs.update_version.outputs.commit_hash }}
           path: builds/FlappyRace-${{ github.event.inputs.tag }}-Linux

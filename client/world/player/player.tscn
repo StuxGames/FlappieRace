@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://client/world/player/flappo.png" type="Texture" id=1]
 [ext_resource path="res://client/world/player/white_square_64px.png" type="Texture" id=2]
@@ -34,6 +34,17 @@
 [ext_resource path="res://client/world/player/powerups/rocket_colours.png" type="Texture" id=32]
 [ext_resource path="res://client/world/player/powerups/rocket_outline.png" type="Texture" id=33]
 [ext_resource path="res://client/world/items/flomb_projectile.tscn" type="PackedScene" id=34]
+[ext_resource path="res://client/world/player/player_frame_1.png" type="Texture" id=35]
+[ext_resource path="res://client/world/player/player_frame_4.png" type="Texture" id=36]
+[ext_resource path="res://client/world/player/player_frame_2.png" type="Texture" id=37]
+[ext_resource path="res://client/world/player/player_frame_3.png" type="Texture" id=38]
+[ext_resource path="res://client/world/player/player_eye.png" type="Texture" id=39]
+[ext_resource path="res://client/world/player/player_horn_1.png" type="Texture" id=40]
+[ext_resource path="res://client/world/player/player_horn_2.png" type="Texture" id=41]
+[ext_resource path="res://client/world/player/player_tongue.png" type="Texture" id=42]
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 45, 28 )
 
 [sub_resource type="Curve" id=8]
 _data = [ Vector2( 0, 0.256757 ), 0.0, 0.743243, 0, 1, Vector2( 1, 1 ), 0.743243, 0.0, 1, 0 ]
@@ -42,6 +53,14 @@ _data = [ Vector2( 0, 0.256757 ), 0.0, 0.743243, 0, 1, Vector2( 1, 1 ), 0.743243
 interpolation_mode = 2
 colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 0.337255 )
 
+[sub_resource type="SpriteFrames" id=20]
+animations = [ {
+"frames": [ ExtResource( 35 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 36 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
 "frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 17 ), ExtResource( 19 ), ExtResource( 18 ) ],
@@ -49,6 +68,9 @@ animations = [ {
 "name": "default",
 "speed": 8.0
 } ]
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 45, 28 )
 
 [sub_resource type="Animation" id=3]
 length = 0.001
@@ -408,6 +430,10 @@ script = ExtResource( 8 )
 ImpactParticles = ExtResource( 22 )
 FlapParticles = ExtResource( 24 )
 
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2( 1, -5 )
+shape = SubResource( 19 )
+
 [node name="VisibleBody" type="Node2D" parent="." index="1"]
 
 [node name="Trail" type="Line2D" parent="VisibleBody" index="0"]
@@ -421,14 +447,43 @@ script = ExtResource( 23 )
 [node name="Sprites" type="Node2D" parent="VisibleBody" index="1"]
 z_index = 2
 
-[node name="Body" type="Sprite" parent="VisibleBody/Sprites" index="0"]
+[node name="NewBody" type="AnimatedSprite" parent="VisibleBody/Sprites" index="0"]
+modulate = Color( 0.984314, 0.0941176, 0.0941176, 1 )
+scale = Vector2( 0.1, 0.1 )
+frames = SubResource( 20 )
+frame = 2
+playing = true
+
+[node name="NewHorn1" type="Sprite" parent="VisibleBody/Sprites" index="1"]
+position = Vector2( 22.6, -15.1 )
+scale = Vector2( 0.11, 0.11 )
+texture = ExtResource( 40 )
+
+[node name="NewHorn2" type="Sprite" parent="VisibleBody/Sprites" index="2"]
+position = Vector2( 33, -16.9 )
+scale = Vector2( 0.12, 0.12 )
+texture = ExtResource( 41 )
+
+[node name="NewEye" type="Sprite" parent="VisibleBody/Sprites" index="3"]
+position = Vector2( 30.5, -0.25 )
+scale = Vector2( 0.105, 0.105 )
+texture = ExtResource( 39 )
+
+[node name="NewTongue" type="Sprite" parent="VisibleBody/Sprites" index="4"]
+position = Vector2( 21.7, 12.2 )
+scale = Vector2( 0.105, 0.105 )
+texture = ExtResource( 42 )
+
+[node name="Body" type="Sprite" parent="VisibleBody/Sprites" index="5"]
+visible = false
 modulate = Color( 0.839216, 0.141176, 0.0666667, 1 )
 texture = ExtResource( 1 )
 hframes = 2
 vframes = 7
 region_rect = Rect2( 0, 0, 128, 448 )
 
-[node name="BodyOutline" type="Sprite" parent="VisibleBody/Sprites" index="1"]
+[node name="BodyOutline" type="Sprite" parent="VisibleBody/Sprites" index="6"]
+visible = false
 modulate = Color( 0.839216, 0.141176, 0.0666667, 1 )
 texture = ExtResource( 1 )
 hframes = 2
@@ -436,7 +491,8 @@ vframes = 7
 frame = 2
 region_rect = Rect2( 0, 0, 128, 448 )
 
-[node name="Wing" type="Sprite" parent="VisibleBody/Sprites" index="2"]
+[node name="Wing" type="Sprite" parent="VisibleBody/Sprites" index="7"]
+visible = false
 modulate = Color( 0.839216, 0.141176, 0.0666667, 1 )
 texture = ExtResource( 1 )
 hframes = 2
@@ -444,14 +500,16 @@ vframes = 7
 frame = 4
 region_rect = Rect2( 0, 0, 128, 448 )
 
-[node name="Eyes" type="Sprite" parent="VisibleBody/Sprites" index="3"]
+[node name="Eyes" type="Sprite" parent="VisibleBody/Sprites" index="8"]
+visible = false
 texture = ExtResource( 1 )
 hframes = 2
 vframes = 7
 frame = 6
 region_rect = Rect2( 0, 0, 128, 448 )
 
-[node name="EyesOutline" type="Sprite" parent="VisibleBody/Sprites" index="4"]
+[node name="EyesOutline" type="Sprite" parent="VisibleBody/Sprites" index="9"]
+visible = false
 modulate = Color( 0.839216, 0.141176, 0.0666667, 1 )
 texture = ExtResource( 1 )
 hframes = 2
@@ -459,14 +517,16 @@ vframes = 7
 frame = 8
 region_rect = Rect2( 0, 0, 128, 448 )
 
-[node name="Beak" type="Sprite" parent="VisibleBody/Sprites" index="5"]
+[node name="Beak" type="Sprite" parent="VisibleBody/Sprites" index="10"]
+visible = false
 texture = ExtResource( 1 )
 hframes = 2
 vframes = 7
 frame = 10
 region_rect = Rect2( 0, 0, 128, 448 )
 
-[node name="BeakOutline" type="Sprite" parent="VisibleBody/Sprites" index="6"]
+[node name="BeakOutline" type="Sprite" parent="VisibleBody/Sprites" index="11"]
+visible = false
 modulate = Color( 0.839216, 0.141176, 0.0666667, 1 )
 texture = ExtResource( 1 )
 hframes = 2
@@ -475,8 +535,11 @@ frame = 12
 region_rect = Rect2( 0, 0, 128, 448 )
 
 [node name="DespawnSprite" type="AnimatedSprite" parent="." index="2"]
-visible = false
 frames = SubResource( 5 )
+
+[node name="CollisionShape2D" parent="Detect" index="0"]
+position = Vector2( 1, -5 )
+shape = SubResource( 21 )
 
 [node name="Flap1" type="AudioStreamPlayer2D" parent="." index="4"]
 stream = ExtResource( 6 )
