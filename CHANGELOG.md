@@ -17,6 +17,8 @@ Types of changes:
 
 ## [Unreleased]
 
+## [1.0.1] - 2024-05-19
+
 ## [1.0.0] - 2024-05-19
 
 First proper release! :D
@@ -25,6 +27,8 @@ First proper release! :D
 
 -   Singleplayer and multiplayer modes
 
-[Unreleased]: https://github.com/StuxGames/FlappieRace/compare/1.0.0...HEAD
+[Unreleased]: https://github.com/StuxGames/FlappyRace/compare/1.0.1...HEAD
+
+[1.0.1]: https://github.com/StuxGames/FlappyRace/compare/1.0.0...1.0.1
 
 [1.0.0]: https://github.com/StuxGames/FlappieRace/compare/1.0.0...1.0.0
