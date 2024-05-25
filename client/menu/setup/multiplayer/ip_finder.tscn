@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://client/theme/flappy.theme" type="Theme" id=1]
+[ext_resource path="res://client/theme/flappierace.theme" type="Theme" id=1]
 [ext_resource path="res://client/ui/custom_label.tscn" type="PackedScene" id=3]
 [ext_resource path="res://client/ui/small_black_label.tscn" type="PackedScene" id=4]
 [ext_resource path="res://client/menu/setup/multiplayer/ip_finder.gd" type="Script" id=5]
@@ -16,7 +16,8 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 265.0
 margin_bottom = 70.0
-custom_colors/font_color_shadow = Color( 0.0196078, 0.0117647, 0, 1 )
+custom_colors/font_color = Color( 0.121569, 0.121569, 0.121569, 1 )
+custom_colors/font_color_shadow = Color( 0.619608, 0.619608, 0.619608, 1 )
 text = "Lobby IP"
 align = 1
 
@@ -55,6 +56,8 @@ margin_right = 265.0
 margin_bottom = 139.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
+custom_colors/font_color = Color( 0.121569, 0.121569, 0.121569, 1 )
+custom_colors/font_color_shadow = Color( 0.619608, 0.619608, 0.619608, 1 )
 text = "xxx.xxx.xxx.xxx"
 
 [node name="MessageLabel" type="Label" parent="."]

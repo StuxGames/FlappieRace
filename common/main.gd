@@ -37,7 +37,7 @@ func parse_command_line_args() -> void:
 	# Hosting options
 	var port = Network.RPC_PORT
 	var use_upnp := false
-	var server_name := "Flappy Server"
+	var server_name := "Flappie Server"
 	var use_server_list := false
 
 	var skip_arg := false
@@ -69,7 +69,7 @@ func parse_command_line_args() -> void:
 		elif arg == "--list":
 			use_server_list = true
 		elif arg == "--version":
-			print("Flappy Race %s" % [ProjectSettings.get_setting("application/config/version")])
+			print("Flappie Race %s" % [ProjectSettings.get_setting("application/config/version")])
 			get_tree().quit()
 			return
 		elif arg in ["--help", "-h"]:

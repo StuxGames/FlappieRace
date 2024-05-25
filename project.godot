@@ -99,11 +99,11 @@ _global_script_class_icons={
 [application]
 
 config/name="Flappie Race"
-config/description="Multiplayer flappy bird"
+config/description="Multiplayer flappie bird"
 run/main_scene="res://common/main.tscn"
 config/icon="res://icon.png"
 config/windows_native_icon="res://icon.ico"
-config/version="v1.0.1"
+config/version="v1.0.2"
 config/debug_tools=false
 config/debug_tools.editor=true
 
@@ -132,7 +132,7 @@ singletons_disabled=[  ]
 
 [gui]
 
-theme/custom="res://client/theme/flappy.theme"
+theme/custom="res://client/theme/flappierace.theme"
 theme/custom_font="res://client/fonts/DelaGothicOne-24.tres"
 
 [importer_defaults]

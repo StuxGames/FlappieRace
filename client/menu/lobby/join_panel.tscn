@@ -4,7 +4,7 @@
 [ext_resource path="res://client/fonts/DelaGothicOne-48.tres" type="DynamicFont" id=2]
 [ext_resource path="res://client/menu/lobby/join_panel.gd" type="Script" id=3]
 [ext_resource path="res://client/fonts/DelaGothicOne-24.tres" type="DynamicFont" id=4]
-[ext_resource path="res://client/theme/flappy.theme" type="Theme" id=5]
+[ext_resource path="res://client/theme/flappierace.theme" type="Theme" id=5]
 [ext_resource path="res://client/fonts/DelaGothicOne-32.tres" type="DynamicFont" id=6]
 
 [node name="JoinPanel" type="PopupPanel"]
@@ -94,9 +94,10 @@ valign = 1
 visible = false
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 93.0
+margin_top = 161.0
 margin_right = 512.0
-margin_bottom = 141.0
+margin_bottom = 209.0
+custom_colors/font_color = Color( 0.0666666, 0.839216, 0.114951, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 6 )
 text = "Info text!"

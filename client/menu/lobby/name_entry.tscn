@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://client/fonts/DelaGothicOne-24.tres" type="DynamicFont" id=1]
-[ext_resource path="res://client/theme/flappy.theme" type="Theme" id=2]
+[ext_resource path="res://client/theme/flappierace.theme" type="Theme" id=2]
 [ext_resource path="res://client/menu/lobby/name_entry.gd" type="Script" id=3]
 [ext_resource path="res://client/ui/title_label.tscn" type="PackedScene" id=4]
 [ext_resource path="res://client/menu/menu_button.tscn" type="PackedScene" id=5]
@@ -28,7 +28,8 @@ size_flags_vertical = 3
 anchor_right = 0.0
 margin_right = 1900.0
 margin_bottom = 111.0
-custom_colors/font_color_shadow = Color( 0.0196078, 0.0117647, 0, 1 )
+custom_colors/font_color = Color( 0.121569, 0.121569, 0.121569, 1 )
+custom_colors/font_color_shadow = Color( 0.619608, 0.619608, 0.619608, 1 )
 text = "Multiplayer"
 
 [node name="Menu" type="Control" parent="VBoxContainer"]

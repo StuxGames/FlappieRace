@@ -53,5 +53,5 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: FlappyRace-${{ matrix.platform }}-${{ inputs.commit_hash || github.sha }}
+          name: FlappieRace-${{ matrix.platform }}-${{ inputs.commit_hash || github.sha }}
           path: builds/${{ matrix.platform }}

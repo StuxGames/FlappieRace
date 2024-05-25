@@ -33,7 +33,7 @@ jobs:
           commit_message: "Update version to ${{ github.event.inputs.tag }}"
           file_pattern: project.godot export_presets.cfg CHANGELOG.md
   build:
-    uses: StuxGames/FlappyRace/.github/workflows/build.yml@main
+    uses: StuxGames/FlappieRace/.github/workflows/build.yml@main
     needs: update_version
     with:
       commit_hash: ${{ needs.update_version.outputs.commit_hash }}
@@ -48,35 +48,35 @@ jobs:
       - name: Download Windows Build
         uses: actions/download-artifact@v4
         with:
-          name: FlappyRace-windows-${{ needs.update_version.outputs.commit_hash }}
-          path: builds/FlappyRace-${{ github.event.inputs.tag }}-Windows
+          name: FlappieRace-windows-${{ needs.update_version.outputs.commit_hash }}
+          path: builds/FlappieRace-${{ github.event.inputs.tag }}-Windows
       - name: Download Mac Build
         uses: actions/download-artifact@v4
         with:
-          name: FlappyRace-mac-${{ needs.update_version.outputs.commit_hash }}
-          path: builds/FlappyRace-${{ github.event.inputs.tag }}-Mac
+          name: FlappieRace-mac-${{ needs.update_version.outputs.commit_hash }}
+          path: builds/FlappieRace-${{ github.event.inputs.tag }}-Mac
       - name: Download Linux Build
         uses: actions/download-artifact@v4
         with:
-          name: FlappyRace-linux-${{ needs.update_version.outputs.commit_hash }}
-          path: builds/FlappyRace-${{ github.event.inputs.tag }}-Linux
+          name: FlappieRace-linux-${{ needs.update_version.outputs.commit_hash }}
+          path: builds/FlappieRace-${{ github.event.inputs.tag }}-Linux
       - name: Prepare Windows
         uses: TheDoctor0/zip-release@0.6.0
         with:
-          filename: FlappyRace-${{ github.event.inputs.tag }}-Windows.zip
-          path: FlappyRace-${{ github.event.inputs.tag }}-Windows/*
+          filename: FlappieRace-${{ github.event.inputs.tag }}-Windows.zip
+          path: FlappieRace-${{ github.event.inputs.tag }}-Windows/*
           directory: builds/
       - name: Prepare Mac
         uses: TheDoctor0/zip-release@0.6.0
         with:
-          filename: FlappyRace-${{ github.event.inputs.tag }}-Mac.zip
-          path: FlappyRace-${{ github.event.inputs.tag }}-Mac/*
+          filename: FlappieRace-${{ github.event.inputs.tag }}-Mac.zip
+          path: FlappieRace-${{ github.event.inputs.tag }}-Mac/*
           directory: builds/
       - name: Prepare Linux
         uses: TheDoctor0/zip-release@0.6.0
         with:
-          filename: FlappyRace-${{ github.event.inputs.tag }}-Linux.zip
-          path: FlappyRace-${{ github.event.inputs.tag }}-Linux/*
+          filename: FlappieRace-${{ github.event.inputs.tag }}-Linux.zip
+          path: FlappieRace-${{ github.event.inputs.tag }}-Linux/*
           directory: builds/
       - name: Extract Release Notes
         uses: ffurrer2/extract-release-notes@v1
@@ -85,8 +85,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.events.inputs.tag }}
-          name: Flappy Race v${{ github.event.inputs.tag }}
+          name: Flappie Race v${{ github.event.inputs.tag }}
           body: ${{ steps.extract-release-notes.outputs.release_notes }}
           draft: true
           files: |
-            builds/FlappyRace-*-*.zip
+            builds/FlappieRace-*-*.zip

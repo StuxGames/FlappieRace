@@ -9,12 +9,13 @@
 [ext_resource path="res://common/world/player/player.gd" type="Script" id=8]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 50.0
+radius = 30.0
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 60.0
+radius = 40.0
 
 [node name="Player" type="KinematicBody2D" groups=["players"]]
+scale = Vector2( 1.03182, 0.990126 )
 collision_mask = 2
 script = ExtResource( 8 )
 __meta__ = {

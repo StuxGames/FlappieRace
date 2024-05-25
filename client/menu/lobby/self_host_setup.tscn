@@ -7,7 +7,7 @@
 [ext_resource path="res://client/ui/title_label.tscn" type="PackedScene" id=5]
 [ext_resource path="res://client/fonts/DelaGothicOne-32.tres" type="DynamicFont" id=6]
 [ext_resource path="res://client/fonts/DelaGothicOne-48.tres" type="DynamicFont" id=7]
-[ext_resource path="res://client/theme/flappy.theme" type="Theme" id=8]
+[ext_resource path="res://client/theme/flappierace.theme" type="Theme" id=8]
 
 [node name="SelfHostSetup" type="Control"]
 anchor_right = 1.0
@@ -29,7 +29,8 @@ size_flags_vertical = 3
 anchor_right = 0.0
 margin_right = 1900.0
 margin_bottom = 111.0
-custom_colors/font_color_shadow = Color( 0.0196078, 0.0117647, 0, 1 )
+custom_colors/font_color = Color( 0.121569, 0.121569, 0.121569, 1 )
+custom_colors/font_color_shadow = Color( 0.619608, 0.619608, 0.619608, 1 )
 text = "Self Host Setup"
 
 [node name="Menu" type="Control" parent="VBoxContainer"]
@@ -194,6 +195,7 @@ valign = 1
 visible = false
 anchor_top = 1.0
 margin_top = -70.0
+custom_colors/font_color = Color( 0.0666666, 0.839216, 0.114951, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Info text!"
 align = 1

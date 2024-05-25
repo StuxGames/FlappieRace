@@ -2,7 +2,7 @@
 
 [ext_resource path="res://client/ui/stopwatch.gd" type="Script" id=1]
 [ext_resource path="res://client/world/player/player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://client/theme/flappy.theme" type="Theme" id=3]
+[ext_resource path="res://client/theme/flappierace.theme" type="Theme" id=3]
 [ext_resource path="res://client/fonts/DelaGothicOne-32.tres" type="DynamicFont" id=4]
 [ext_resource path="res://client/ui/death-skull-64px.png" type="Texture" id=5]
 

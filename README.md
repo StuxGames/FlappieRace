@@ -1,2 +1,2 @@
-## Flappy Race
+## Flappie Race
 Information coming soon

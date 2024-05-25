@@ -11,4 +11,5 @@ flat = true
 script = ExtResource( 1 )
 
 [node name="Label" parent="." instance=ExtResource( 2 )]
-rect_pivot_offset = Vector2( -214, 488 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0 )

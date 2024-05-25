@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://client/menu/title/title_screen.gd" type="Script" id=1]
-[ext_resource path="res://client/menu/title/flappy_race_logo.png" type="Texture" id=2]
+[ext_resource path="res://client/menu/title/flappie_race_logo.png" type="Texture" id=2]
 [ext_resource path="res://client/fonts/DelaGothicOne-24.tres" type="DynamicFont" id=5]
 [ext_resource path="res://client/menu/menu_button.tscn" type="PackedScene" id=10]
 
@@ -86,7 +86,8 @@ anchor_bottom = 1.0
 margin_left = -187.0
 margin_top = -35.0
 size_flags_vertical = 1
-custom_colors/font_color_shadow = Color( 0.0196078, 0.0117647, 0, 1 )
+custom_colors/font_color = Color( 0.121569, 0.121569, 0.121569, 1 )
+custom_colors/font_color_shadow = Color( 0.619608, 0.619608, 0.619608, 1 )
 custom_fonts/font = ExtResource( 5 )
 text = "Stux Games"
 valign = 1
@@ -98,7 +99,8 @@ margin_top = -35.0
 margin_right = 140.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_colors/font_color_shadow = Color( 0.0196078, 0.0117647, 0, 1 )
+custom_colors/font_color = Color( 0.121569, 0.121569, 0.121569, 1 )
+custom_colors/font_color_shadow = Color( 0.619608, 0.619608, 0.619608, 1 )
 custom_fonts/font = ExtResource( 5 )
 text = "vW.X.Y.Z"
 valign = 2

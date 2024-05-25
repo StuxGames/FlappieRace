@@ -13,7 +13,7 @@
 [ext_resource path="res://client/audio/magnet.ogg" type="AudioStream" id=11]
 [ext_resource path="res://client/world/player/powerups/magnet.gd" type="Script" id=12]
 [ext_resource path="res://client/world/player/powerups/picoberry.gd" type="Script" id=13]
-[ext_resource path="res://client/theme/flappy.theme" type="Theme" id=14]
+[ext_resource path="res://client/theme/flappierace.theme" type="Theme" id=14]
 [ext_resource path="res://client/audio/coin.ogg" type="AudioStream" id=15]
 [ext_resource path="res://client/audio/coin_lost.ogg" type="AudioStream" id=16]
 [ext_resource path="res://client/world/player/explode_2.png" type="Texture" id=17]
@@ -452,7 +452,7 @@ z_index = 2
 modulate = Color( 0.984314, 0.0941176, 0.0941176, 1 )
 scale = Vector2( 0.1, 0.1 )
 frames = SubResource( 20 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="NewHorn1" type="Sprite" parent="VisibleBody/Sprites" index="1"]
