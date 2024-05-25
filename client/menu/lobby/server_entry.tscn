@@ -17,6 +17,8 @@ margin_top = 7.0
 margin_right = 800.0
 margin_bottom = 42.0
 rect_min_size = Vector2( 800, 0 )
+custom_colors/font_color = Color( 0.0666667, 0.839216, 0.788235, 1 )
+custom_colors/font_color_shadow = Color( 0.0196078, 0.0117647, 0, 1 )
 custom_fonts/font = ExtResource( 1 )
 text = "server name"
 
@@ -26,6 +28,8 @@ margin_top = 7.0
 margin_right = 1104.0
 margin_bottom = 42.0
 rect_min_size = Vector2( 300, 0 )
+custom_colors/font_color = Color( 0.0666667, 0.839216, 0.788235, 1 )
+custom_colors/font_color_shadow = Color( 0.0196078, 0.0117647, 0, 1 )
 custom_fonts/font = ExtResource( 1 )
 text = "x"
 

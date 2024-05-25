@@ -111,7 +111,7 @@ func _try_connect() -> void:
 		return
 	var url = "%s/%s" % [server_list_url, server_list_route]
 	Logger.print(self, "Attempting connection to %s..." % url)
-	var result = _client.connect_to_url(url, ["json"], false, ["User-Agent: Flappy-Race-Server"])
+	var result = _client.connect_to_url(url, ["json"], false, ["User-Agent: Flappie-Race-Server"])
 	if result != OK:
 		Logger.print(self, "Unable to connect to server list - will try again")
 		$ReconnectionTimer.start()

@@ -5,7 +5,7 @@
 [ext_resource path="res://client/world/player/player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://client/menu/setup/setup.gd" type="Script" id=4]
 [ext_resource path="res://client/ui/title_label.tscn" type="PackedScene" id=5]
-[ext_resource path="res://client/theme/flappy.theme" type="Theme" id=6]
+[ext_resource path="res://client/theme/flappierace.theme" type="Theme" id=6]
 [ext_resource path="res://client/fonts/DelaGothicOne-24.tres" type="DynamicFont" id=7]
 [ext_resource path="res://client/ui/message_box.tscn" type="PackedScene" id=8]
 [ext_resource path="res://client/fonts/DelaGothicOne-32.tres" type="DynamicFont" id=9]
@@ -82,7 +82,8 @@ script = ExtResource( 4 )
 margin_top = -10.0
 margin_bottom = 107.0
 rect_scale = Vector2( 1, 0.998114 )
-custom_colors/font_color_shadow = Color( 0.0196078, 0.0117647, 0, 1 )
+custom_colors/font_color = Color( 0.121569, 0.121569, 0.121569, 1 )
+custom_colors/font_color_shadow = Color( 0.619608, 0.619608, 0.619608, 1 )
 text = "Setup"
 
 [node name="PlayerOptions" type="CenterContainer" parent="."]
@@ -194,7 +195,8 @@ margin_right = 131.5
 margin_bottom = 168.0
 grow_horizontal = 2
 theme = ExtResource( 6 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.121569, 0.121569, 0.121569, 1 )
+custom_colors/font_color_shadow = Color( 0.619608, 0.619608, 0.619608, 1 )
 custom_constants/shadow_offset_y = 5
 custom_fonts/font = ExtResource( 9 )
 text = "Info message"

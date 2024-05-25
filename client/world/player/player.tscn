@@ -13,7 +13,7 @@
 [ext_resource path="res://client/audio/magnet.ogg" type="AudioStream" id=11]
 [ext_resource path="res://client/world/player/powerups/magnet.gd" type="Script" id=12]
 [ext_resource path="res://client/world/player/powerups/picoberry.gd" type="Script" id=13]
-[ext_resource path="res://client/theme/flappy.theme" type="Theme" id=14]
+[ext_resource path="res://client/theme/flappierace.theme" type="Theme" id=14]
 [ext_resource path="res://client/audio/coin.ogg" type="AudioStream" id=15]
 [ext_resource path="res://client/audio/coin_lost.ogg" type="AudioStream" id=16]
 [ext_resource path="res://client/world/player/explode_2.png" type="Texture" id=17]
@@ -44,7 +44,7 @@
 [ext_resource path="res://client/world/player/player_tongue.png" type="Texture" id=42]
 
 [sub_resource type="RectangleShape2D" id=19]
-extents = Vector2( 45, 28 )
+extents = Vector2( 40.5, 18.5 )
 
 [sub_resource type="Curve" id=8]
 _data = [ Vector2( 0, 0.256757 ), 0.0, 0.743243, 0, 1, Vector2( 1, 1 ), 0.743243, 0.0, 1, 0 ]
@@ -431,7 +431,8 @@ ImpactParticles = ExtResource( 22 )
 FlapParticles = ExtResource( 24 )
 
 [node name="CollisionShape2D" parent="." index="0"]
-position = Vector2( 1, -5 )
+position = Vector2( 1.5, 0.5 )
+scale = Vector2( 1.05498, 0.8 )
 shape = SubResource( 19 )
 
 [node name="VisibleBody" type="Node2D" parent="." index="1"]

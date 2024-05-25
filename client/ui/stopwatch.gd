@@ -30,7 +30,7 @@ func format_time_string(time_in: float) -> String:
 	var milliseconds := int(fmod(time_in, 1) * 100)
 	if time_in >= 3600:
 		var hours := int(fmod(time_in / 3600, 60))
-		# Hours for all the most dedicated flappy racers
+		# Hours for all the most dedicated flappie racers
 		return "%02d:%02d:%02d.%02d" % [hours, minutes, seconds, milliseconds]
 	else:
 		return "%02d:%02d.%02d" % [minutes, seconds, milliseconds]

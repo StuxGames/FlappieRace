@@ -41,9 +41,9 @@ RUN wget https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}
     && rm -f Godot_v${GODOT_VERSION}-stable_linux_server.64.zip
 
 # Create links to the HTTPS certs which will be mounted when hosting
-RUN mkdir -p ~/.local/share/godot/app_userdata/Flappy\ Race/certs \
-    && ln -s /secrets/live/flappyrace.localhost/fullchain.pem ~/.local/share/godot/app_userdata/Flappy\ Race/certs/X509_certificate.crt \
-    && ln -s /secrets/live/flappyrace.localhost/privkey.pem ~/.local/share/godot/app_userdata/Flappy\ Race/certs/X509_key.key
+RUN mkdir -p ~/.local/share/godot/app_userdata/Flappie\ Race/certs \
+    && ln -s /secrets/live/flappierace.localhost/fullchain.pem ~/.local/share/godot/app_userdata/Flappie\ Race/certs/X509_certificate.crt \
+    && ln -s /secrets/live/flappierace.localhost/privkey.pem ~/.local/share/godot/app_userdata/Flappie\ Race/certs/X509_key.key
 
 # Copy the exported .pck and run it
 COPY --from=builder /build/server.pck server.pck

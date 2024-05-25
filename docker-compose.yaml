@@ -7,4 +7,4 @@ services:
       - "31400:31400"
       - "31400:31400/udp"
     tty: true
-    container_name: flappy-server
+    container_name: flappie-server
